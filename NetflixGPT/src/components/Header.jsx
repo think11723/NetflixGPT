@@ -7,7 +7,7 @@ import { auth } from "../utils/firebase";
 const Header = () => {
   const navigate = useNavigate()
   const user = useSelector((state)=>state.user)
-  console.log(user);
+  // console.log(user);
   function handleSignOut() {
     signOut(auth)
       .then(() => {
@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <>
-    <div className="absolute flex justify-between p-2 items-center w-screen">
+    <div className="absolute top-0 flex justify-between p-2 items-center w-screen">
 
       <img
         src="https://occ.a.nflxso.net/dnmt/api/v6/iL4oJVDYZ8KLSrJ6eG2OwtghbfQ/AAAAAeuLioOK1ZSC8bQbffYbz1gZFxugAQdkx7UsMvqKDtFJLk3EWkpY-w8IBimYy_0xmg1aTzugh7JDHsGzv6hqIL9_qklFo-PFSH81MwCe9rokU4kGkdki.svg"

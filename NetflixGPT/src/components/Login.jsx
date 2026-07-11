@@ -69,7 +69,6 @@ const Login = () => {
             .catch((error) => {
               // An error occurred
               // ...
-              navigate(<Error />)
             });
           // console.log(userCredential.user);
         })
