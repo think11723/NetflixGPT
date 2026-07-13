@@ -104,20 +104,20 @@ const Login = () => {
           e.preventDefault();
           handleSubmit();
         }}
-        className="absolute text-white bg-black opacity-85 my-20 mx-110 p-5 w-100 rounded-2xl z-30"
+        className="absolute left-1/2 top-1/2 z-30 w-11/12 max-w-sm -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-black p-6 text-white opacity-90 sm:w-96 sm:p-8 md:w-full md:max-w-sm"
       >
-        <h1 className="font-bold text-3xl text-center m-2">
+        <h1 className="mb-4 text-center text-2xl font-bold sm:text-3xl">
           {isNewUser ? "Sign Up" : "Sign In"}
         </h1>
 
-        {error && <p className="font-bold text-red-600 mb-2">{error}</p>}
+        {error && <p className="mb-3 font-bold text-red-500 text-sm sm:text-base">{error}</p>}
 
         {isNewUser && (
           <input
             type="text"
             ref={nameRef}
             placeholder="Name"
-            className="w-full bg-gray-800 rounded-sm p-3 text-xl my-2"
+            className="mb-3 w-full rounded-sm bg-gray-800 p-2.5 text-base text-white placeholder-gray-400 sm:p-3 sm:text-lg"
           />
         )}
 
@@ -125,19 +125,19 @@ const Login = () => {
           ref={emailRef}
           type="email"
           placeholder="abc@gmail.com"
-          className="w-full bg-gray-800 rounded-sm p-3 text-xl my-2"
+          className="mb-3 w-full rounded-sm bg-gray-800 p-2.5 text-base text-white placeholder-gray-400 sm:p-3 sm:text-lg"
         />
 
         <input
           ref={passwordRef}
           type="password"
           placeholder="Password"
-          className="w-full bg-gray-800 rounded-sm p-3 text-xl my-2"
+          className="mb-4 w-full rounded-sm bg-gray-800 p-2.5 text-base text-white placeholder-gray-400 sm:p-3 sm:text-lg"
         />
 
         <button
           type="submit"
-          className="w-full bg-red-800 rounded-sm p-2 text-2xl font-extrabold my-5 hover:bg-red-950"
+          className="w-full rounded-sm bg-red-700 p-2.5 text-lg font-bold text-white transition hover:bg-red-800 sm:p-3 sm:text-xl"
         >
           {isNewUser ? "Sign Up" : "Sign In"}
         </button>

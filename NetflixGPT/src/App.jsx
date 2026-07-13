@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Login from "./components/Login";
 import Browse from "./components/Browse";
 import Error from "./components/Error";
+import AIChat from "./components/AIChat/AIChat";
 
 import { auth } from "./utils/firebase";
 import { onAuthStateChanged } from "firebase/auth";
@@ -47,13 +48,18 @@ export default function App() {
   }, [dispatch, navigate]);
 
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Login />} />
-        <Route path="browse" element={<Browse />} />
-      </Route>
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Login />} />
+          <Route path="browse" element={<Browse />} />
+        </Route>
 
-      <Route path="*" element={<Error />} />
-    </Routes>
+        <Route path="*" element={<Error />} />
+      </Routes>
+
+      {/* AI Movie Concierge - Always available on Browse page */}
+      <AIChat />
+    </>
   );
 }

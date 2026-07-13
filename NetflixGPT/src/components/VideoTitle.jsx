@@ -1,14 +1,24 @@
 import React from 'react'
 
-const VideoTitle = ({title,overview}) => {
+const VideoTitle = ({ title, overview }) => {
   return (
-    <div className='absolute w-1/3 mt-50 ml-15 text-white z-3 p-2 items-center'>
-        <p className='m-2 font-bold text-6xl text-white'>{title}</p>
-        <p className='font-bold text-m mt-3 ml-2' >{overview}</p>
-        <div className='mt-4 ml-2'>
-            <button className='text-2xl font-bold bg-amber-50 text-black px-5 py-1 rounded-md hover:bg-gray-600 cursor-pointer'>▶️ Play</button>
-            <button className='text-2xl font-bold bg-amber-50 text-black px-5 py-1 rounded-md hover:bg-gray-600 mx-4 cursor-pointer'>More Info</button>
+    <div className="absolute inset-0 z-30 flex flex-col justify-end">
+      <div className="w-full max-w-3xl px-4 pb-8 sm:px-6 sm:pb-12 md:px-8 md:pb-16 lg:px-12 lg:pb-24">
+        <h1 className="mb-4 text-3xl font-black text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight tracking-tight">
+          {title}
+        </h1>
+        <p className="mb-8 max-w-2xl text-sm text-gray-200 line-clamp-3 sm:text-base md:text-lg lg:line-clamp-4 leading-relaxed">
+          {overview}
+        </p>
+        <div className="flex flex-wrap gap-3 sm:gap-4">
+          <button className="btn-play">
+            ▶ Play
+          </button>
+          <button className="btn-info">
+            ⓘ More Info
+          </button>
         </div>
+      </div>
     </div>
   )
 }
